@@ -7,13 +7,14 @@
   },
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "node server.js",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "lint": "ng lint",
     "p:fix": "prettier --config ./.prettiererrc --write \"src/{app,environments}/**/*{.ts,.html,.css}\"",
-    "compodoc": "npx compodoc -p ./tsconfig.json"
+    "compodoc": "npx compodoc -p ./tsconfig.json",
+    "heroku-postbuild": "ng build --prod"
   },
   "private": true,
   "dependencies": {

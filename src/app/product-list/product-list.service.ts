@@ -8,8 +8,8 @@ import { Observable } from 'rxjs';
 })
 export class ProductListService {
 
-  private URL_API = 'http://localhost:3000/products/';
-  private URL_IMG = 'http://localhost:3000/products/img/';
+  private URL_API = 'https://crud-products-nodejs-nidal.herokuapp.com/products/';
+  private URL_IMG = 'https://crud-products-nodejs-nidal.herokuapp.com/products/img/';
 
   constructor(private http: HttpClient) {}
 
