@@ -1,0 +1,111 @@
+<!-- editProduct template -->
+<ng-template #templateEdit>
+  <app-edit-product-popup
+    [product]="this.selectedProduct"
+    [productTypes]="this.productTypes"
+    [service]="service"></app-edit-product-popup>
+</ng-template>
+<!-- showImage template -->
+<ng-template #templateShowImg>
+  <button [mat-dialog-close]="true" class="btn-close" mat-dialog-title></button>
+  <mat-dialog-content class="mat-typography d-flex">
+    <img [src]="imageSrc" alt="" class="img-fluid img-dialog mx-auto" />
+  </mat-dialog-content>
+</ng-template>
+<!-- list v2 -->
+<div class="row d-flex mx-auto">
+  <mat-table [dataSource]="dataSource" class="mat-elevation-z8 table-products">
+    <ng-container matColumnDef="numero">
+      <mat-header-cell *matHeaderCellDef> No. </mat-header-cell>
+      <mat-cell *matCellDef="let i = index"> {{ i + 1 }} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="image">
+      <mat-header-cell *matHeaderCellDef> Image </mat-header-cell>
+      <mat-cell *matCellDef="let product">
+        <button class="edit-btn" (click)="openImage(product.image)">
+          <mat-icon>collections</mat-icon>
+        </button>
+      </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="libelle">
+      <mat-header-cell *matHeaderCellDef> Nom </mat-header-cell>
+      <mat-cell *matCellDef="let product"> {{ product.libelle }} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="description">
+      <mat-header-cell *matHeaderCellDef> Description </mat-header-cell>
+      <mat-cell *matCellDef="let product">
+        {{ product.description.substring(0, 57) + '...' }}
+      </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="type">
+      <mat-header-cell *matHeaderCellDef> Type </mat-header-cell>
+      <mat-cell *matCellDef="let product"> {{ product.type }} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="quantite">
+      <mat-header-cell *matHeaderCellDef> Quantité </mat-header-cell>
+      <mat-cell *matCellDef="let product"> {{ product.quantite }} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="actions">
+      <mat-header-cell *matHeaderCellDef> Actions </mat-header-cell>
+      <mat-cell *matCellDef="let product">
+        <button class="edit-btn" (click)="editProductPopup(product.id)">
+          <mat-icon>edit</mat-icon>
+        </button>
+        <button class="del-btn" (click)="deleteProductConfirm(product.id)">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+  </mat-table>
+  <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons> </mat-paginator>
+</div>
+<!-- Button filter search -->
+<div ngbDropdown class="d-inline-block filters text-end">
+  <button mat-fab mat-button class="filter-btn" ngbDropdownToggle>
+    <mat-icon>filter_list</mat-icon>
+  </button>
+  <div ngbDropdownMenu class="filter-box">
+    <form [formGroup]="filterForm" (ngSubmit)="setFilters()" class="px-4 py-3">
+      <mat-form-field class="mb-3">
+        <mat-label>Recherchez</mat-label>
+        <input matInput formControlName="search" placeholder="Par nom ou mot-clé" />
+        <mat-icon matSuffix>search</mat-icon>
+        <mat-hint>Marque, caractéristique...</mat-hint>
+      </mat-form-field>
+      <p class="text-center pb-0">Par type de produit :</p>
+      <div *ngFor="let type of productTypes" class="form-check">
+        <input
+          type="radio"
+          formControlName="type"
+          value="{{ type }}"
+          class="form-check-input"
+          id="{{ type }}" />
+        <label class="form-check-label" for="{{ type }}">
+          {{ type }}
+        </label>
+      </div>
+      <div class="dropdown-divider mt-4"></div>
+      <div class="text-center justify-content-center">
+        <div class="row">
+          <div class="col-md-6">
+            <button type="submit" class="btn btn-primary text-center mx-3">Filtrer</button>
+          </div>
+          <div class="col-md-6">
+            <button class="btn btn-danger text-center mx-3" (click)="resetFilters()">
+              Réinitialiser
+            </button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

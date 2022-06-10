@@ -1,0 +1,51 @@
+<div class="login mx-auto mt-3">
+  <div class="login-box d-flex p-5">
+    <div class="container">
+      <div class="row d-flex">
+        <div class="col-md-9 mx-auto">
+          <form class="form-signin" [formGroup]="signinForm" (ngSubmit)="loginUser()">
+            <h3 class="h3 mb-3 font-weight-normal text-center">Se connecter</h3>
+            <div class="form-group my-5">
+              <mat-form-field class="example-form-field" appearance="fill">
+                <mat-label>Nom d'utilisateur</mat-label>
+                <input matInput type="text" formControlName="username" />
+                <button
+                  *ngIf="this.signinForm.value['username']"
+                  matSuffix
+                  mat-icon-button
+                  type="button"
+                  (click)="this.signinForm.controls['username'].setValue('')">
+                  <mat-icon>close</mat-icon>
+                </button>
+                <mat-error *ngIf="this.signinForm.controls['username'].invalid">{{
+                  getUsernameErrorMessage()
+                }}</mat-error>
+              </mat-form-field>
+            </div>
+            <div class="form-group my-5">
+              <mat-form-field appearance="fill">
+                <mat-label>Entrez votre mot de passe</mat-label>
+                <input matInput [type]="hide ? 'password' : 'text'" formControlName="password" />
+                <button
+                  mat-icon-button
+                  matSuffix
+                  type="button"
+                  (click)="hide = !hide"
+                  [attr.aria-label]="'Hide password'"
+                  [attr.aria-pressed]="hide">
+                  <mat-icon>{{ hide ? 'visibility_off' : 'visibility' }}</mat-icon>
+                </button>
+                <mat-error *ngIf="this.signinForm.controls['password'].invalid">{{
+                  getPasswordErrorMessage()
+                }}</mat-error>
+              </mat-form-field>
+            </div>
+            <div class="my-5 pt-5 text-center">
+              <button type="submit" class="btn btn-block btn-primary">Connexion</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

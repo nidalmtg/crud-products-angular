@@ -1,0 +1,957 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>frontend documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">frontend documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li
+  >
+  CreateProductPopupComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/product-list/create-product-popup/create-product-popup.component.ts</code>
+</p>
+
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-create-product-popup</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./create-product-popup.component.css</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./create-product-popup.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#fileHandler" >fileHandler</a>
+                            </li>
+                            <li>
+                                <a href="#form" >form</a>
+                            </li>
+                            <li>
+                                <a href="#imageSrc" >imageSrc</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#createProduct" >createProduct</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit" >ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#onFileSelected" >onFileSelected</a>
+                            </li>
+                            <li>
+                                <a href="#previsualizeImage" >previsualizeImage</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Inputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#productTypes" >productTypes</a>
+                            </li>
+                            <li>
+                                <a href="#service" >service</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(formBuilder: <a href="https://angular.io/api/forms/FormBuilder" target="_blank">FormBuilder</a>, http: <a href="https://angular.io/api/common/http/HttpClient" target="_blank">HttpClient</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/app/product-list/create-product-popup/create-product-popup.component.ts:26</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>formBuilder</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/forms/FormBuilder" target="_blank" >FormBuilder</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>http</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/common/http/HttpClient" target="_blank" >HttpClient</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    <h3 id="inputs">Inputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="productTypes"></a>
+                        <b>productTypes</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>string[]</code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/app/product-list/create-product-popup/create-product-popup.component.ts:24</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="service"></a>
+                        <b>service</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../injectables/ProductListService.html" target="_self" >ProductListService</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/product-list/create-product-popup/create-product-popup.component.ts:25</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="createProduct"></a>
+                    <span class="name">
+                        <span ><b>createProduct</b></span>
+                        <a href="#createProduct"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>createProduct()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="39"
+                            class="link-to-prism">src/app/product-list/create-product-popup/create-product-popup.component.ts:39</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Permet de créer un produit en récupérant les valeurs du formulaire. Si la requête est réussie, l&#39;image est envoyée
+vers l&#39;API.
+See ProductListService.createProduct
+See FileHandler.uploadImage</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <span ><b>ngOnInit</b></span>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="29"
+                            class="link-to-prism">src/app/product-list/create-product-popup/create-product-popup.component.ts:29</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onFileSelected"></a>
+                    <span class="name">
+                        <span ><b>onFileSelected</b></span>
+                        <a href="#onFileSelected"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onFileSelected(event: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="64"
+                            class="link-to-prism">src/app/product-list/create-product-popup/create-product-popup.component.ts:64</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Permet de récupérer le fichier chargé depuis l&#39;input dans une variable et d&#39;afficher sa prévisualisation
+dans le formulaire.</p>
+<p>See previsualizeImage</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>event</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Fichier envoyé depuis le formulaire</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="previsualizeImage"></a>
+                    <span class="name">
+                        <span ><b>previsualizeImage</b></span>
+                        <a href="#previsualizeImage"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>previsualizeImage(event: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="72"
+                            class="link-to-prism">src/app/product-list/create-product-popup/create-product-popup.component.ts:72</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>event</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Image à prévisualiser</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="fileHandler"></a>
+                    <span class="name">
+                        <span ><b>fileHandler</b></span>
+                        <a href="#fileHandler"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../classes/FileHandler.html" target="_self" >FileHandler</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/app/product-list/create-product-popup/create-product-popup.component.ts:22</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="form"></a>
+                    <span class="name">
+                        <span ><b>form</b></span>
+                        <a href="#form"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>this.formBuilder.group({
+    libelle: &#x27;&#x27;,
+    description: &#x27;&#x27;,
+    type: &#x27;&#x27;,
+    quantite: &#x27;&#x27;,
+    image: &#x27;&#x27;,
+  })</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/product-list/create-product-popup/create-product-popup.component.ts:15</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="imageSrc"></a>
+                    <span class="name">
+                        <span ><b>imageSrc</b></span>
+                        <a href="#imageSrc"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/app/product-list/create-product-popup/create-product-popup.component.ts:26</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, Input, OnInit } from &#x27;@angular/core&#x27;;
+import { Product } from &#x27;../product&#x27;;
+import { ProductListService } from &#x27;../product-list.service&#x27;;
+import { FormBuilder } from &#x27;@angular/forms&#x27;;
+import { HttpClient, HttpHeaders } from &#x27;@angular/common/http&#x27;;
+import { FileHandler } from &#x27;../../file-handler&#x27;;
+
+@Component({
+  selector: &#x27;app-create-product-popup&#x27;,
+  templateUrl: &#x27;./create-product-popup.component.html&#x27;,
+  styleUrls: [&#x27;./create-product-popup.component.css&#x27;],
+})
+export class CreateProductPopupComponent implements OnInit {
+
+  form &#x3D; this.formBuilder.group({
+    libelle: &#x27;&#x27;,
+    description: &#x27;&#x27;,
+    type: &#x27;&#x27;,
+    quantite: &#x27;&#x27;,
+    image: &#x27;&#x27;,
+  });
+  fileHandler!: FileHandler;
+
+  @Input() productTypes!: string[];
+  @Input() service!: ProductListService;
+  imageSrc: any;
+  constructor(private formBuilder: FormBuilder, private http: HttpClient) {}
+
+  ngOnInit(): void {
+    this.fileHandler &#x3D; new FileHandler(this.http);
+  }
+
+  /**
+   * Permet de créer un produit en récupérant les valeurs du formulaire. Si la requête est réussie, l&#x27;image est envoyée
+   * vers l&#x27;API.
+   * @see ProductListService.createProduct
+   * @see FileHandler.uploadImage
+   */
+  createProduct() {
+    const body &#x3D; new URLSearchParams();
+    for (const [key, value] of Object.entries(this.form.value)) {
+      body.set(key, &lt;string&gt;value);
+    }
+    this.fileHandler.setNewFilename()
+    body.set(&#x27;image&#x27;, this.fileHandler.toSend.alias);
+
+    const options &#x3D; {
+      headers: new HttpHeaders().set(&#x27;Content-Type&#x27;, &#x27;application/x-www-form-urlencoded&#x27;),
+    };
+
+    this.service.createProduct(body, options).subscribe((data: Product) &#x3D;&gt; {
+      this.fileHandler.uploadImage();
+      console.log(data);
+    });
+  }
+
+  /**
+   * Permet de récupérer le fichier chargé depuis l&#x27;input dans une variable et d&#x27;afficher sa prévisualisation
+   * dans le formulaire.
+   *
+   * @param event Fichier envoyé depuis le formulaire
+   * @see previsualizeImage
+   */
+  onFileSelected(event: any) {
+    this.fileHandler.toSend &#x3D; event.target.files[0];
+    this.previsualizeImage(event);
+  }
+
+  /**
+   * @param event Image à prévisualiser
+   */
+  previsualizeImage(event: any): void {
+    if (event.target.files &amp;&amp; event.target.files[0]) {
+      const file &#x3D; event.target.files[0];
+
+      const reader &#x3D; new FileReader();
+      reader.onload &#x3D; e &#x3D;&gt; (this.imageSrc &#x3D; reader.result);
+
+      reader.readAsDataURL(file);
+    }
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;form class&#x3D;&quot;edit-product-popup my-0&quot; [formGroup]&#x3D;&quot;form&quot; (ngSubmit)&#x3D;&quot;createProduct()&quot;&gt;
+  &lt;mat-grid-list cols&#x3D;&quot;4&quot; rowHeight&#x3D;&quot;12vh&quot; gutterSize&#x3D;&quot;1em&quot;&gt;
+    &lt;h2 mat-dialog-title&gt;Ajouter un nouveau produit&lt;/h2&gt;
+    &lt;mat-dialog-content class&#x3D;&quot;mat-typography&quot;&gt;
+      &lt;mat-grid-tile rowspan&#x3D;&quot;3&quot; colspan&#x3D;&quot;2&quot;&gt;
+        &lt;img [src]&#x3D;&quot;imageSrc&quot; alt&#x3D;&quot;&quot; class&#x3D;&quot;img-form&quot;&gt;
+      &lt;/mat-grid-tile&gt;
+      &lt;mat-grid-tile rowspan&#x3D;&quot;1&quot; colspan&#x3D;&quot;2&quot;&gt;
+        &lt;mat-form-field hintLabel&#x3D;&quot;Max 128 caractères&quot; appearance&#x3D;&quot;fill&quot;&gt;
+          &lt;mat-label&gt;Nom du produit&lt;/mat-label&gt;
+          &lt;input
+            matInput
+            #libelle
+            formControlName&#x3D;&quot;libelle&quot;
+            maxlength&#x3D;&quot;128&quot;
+            placeholder&#x3D;&quot;Ex. Apple iPhone 13 Pro Max&quot; /&gt;
+          &lt;mat-hint align&#x3D;&quot;end&quot;&gt;{{ libelle.value?.length || 0 }}/128&lt;/mat-hint&gt;
+          &lt;mat-error *ngIf&#x3D;&quot;form.controls[&#x27;libelle&#x27;].hasError(&#x27;required&#x27;)&quot;&gt;
+            &lt;strong&gt;Champs requis&lt;/strong&gt;
+          &lt;/mat-error&gt;
+        &lt;/mat-form-field&gt;
+      &lt;/mat-grid-tile&gt;
+      &lt;mat-grid-tile rowspan&#x3D;&quot;3&quot; colspan&#x3D;&quot;2&quot;&gt;
+        &lt;mat-form-field hintLabel&#x3D;&quot;Max 512 caractères&quot; appearance&#x3D;&quot;fill&quot;&gt;
+          &lt;mat-label&gt;Description&lt;/mat-label&gt;
+          &lt;textarea
+            rows&#x3D;&quot;12&quot;
+            matInput
+            #description
+            formControlName&#x3D;&quot;description&quot;
+            maxlength&#x3D;&quot;512&quot;
+            placeholder&#x3D;&quot;Écrire une description...&quot;&gt;&lt;/textarea&gt;
+          &lt;mat-hint align&#x3D;&quot;end&quot;&gt;{{ description.value?.length || 0 }}/512&lt;/mat-hint&gt;
+          &lt;mat-error *ngIf&#x3D;&quot;form.controls[&#x27;description&#x27;].hasError(&#x27;required&#x27;)&quot;&gt;
+            &lt;strong&gt;Champs requis&lt;/strong&gt;
+          &lt;/mat-error&gt;
+        &lt;/mat-form-field&gt;
+      &lt;/mat-grid-tile&gt;
+      &lt;mat-grid-tile rowspan&#x3D;&quot;1&quot; colspan&#x3D;&quot;2&quot;&gt;
+        &lt;input
+          formControlName&#x3D;&quot;image&quot;
+          class&#x3D;&quot;form-control&quot;
+          id&#x3D;&quot;image&quot;
+          type&#x3D;&quot;file&quot;
+          (change)&#x3D;&quot;onFileSelected($event)&quot; /&gt;
+      &lt;/mat-grid-tile&gt;
+      &lt;mat-grid-tile rowspan&#x3D;&quot;1&quot; colspan&#x3D;&quot;2&quot;&gt;
+        &lt;mat-form-field appearance&#x3D;&quot;fill&quot;&gt;
+          &lt;mat-label&gt;Type de produit&lt;/mat-label&gt;
+          &lt;mat-select class&#x3D;&quot;mx-auto&quot; formControlName&#x3D;&quot;type&quot;&gt;
+            &lt;div *ngFor&#x3D;&quot;let type of productTypes&quot;&gt;
+              &lt;mat-option [value]&#x3D;&quot;type&quot;&gt;{{ type }}&lt;/mat-option&gt;
+            &lt;/div&gt;
+          &lt;/mat-select&gt;
+          &lt;mat-error *ngIf&#x3D;&quot;form.controls[&#x27;type&#x27;].hasError(&#x27;required&#x27;)&quot;&gt;
+            &lt;strong&gt;Champs requis&lt;/strong&gt;
+          &lt;/mat-error&gt;
+        &lt;/mat-form-field&gt;
+      &lt;/mat-grid-tile&gt;
+      &lt;mat-grid-tile rowspan&#x3D;&quot;1&quot; colspan&#x3D;&quot;2&quot;&gt;
+        &lt;mat-form-field appearance&#x3D;&quot;fill&quot;&gt;
+          &lt;mat-label&gt;Quantité&lt;/mat-label&gt;
+          &lt;input matInput type&#x3D;&quot;number&quot; formControlName&#x3D;&quot;quantite&quot; /&gt;
+          &lt;mat-error *ngIf&#x3D;&quot;form.controls[&#x27;libelle&#x27;].hasError(&#x27;required&#x27;)&quot;&gt;
+            &lt;strong&gt;Champs requis&lt;/strong&gt;
+          &lt;/mat-error&gt;
+        &lt;/mat-form-field&gt;
+      &lt;/mat-grid-tile&gt;
+    &lt;/mat-dialog-content&gt;
+  &lt;/mat-grid-list&gt;
+  &lt;mat-dialog-actions align&#x3D;&quot;end&quot;&gt;
+    &lt;button mat-button [mat-dialog-close]&#x3D;&quot;true&quot; class&#x3D;&quot;btn btn-danger text-center&quot;&gt;Annuler&lt;/button&gt;
+    &lt;input
+      mat-button
+      type&#x3D;&quot;submit&quot;
+      [mat-dialog-close]&#x3D;&quot;true&quot;
+      class&#x3D;&quot;btn btn-primary text-center&quot;
+      value&#x3D;&quot;Créer&quot; /&gt;
+  &lt;/mat-dialog-actions&gt;
+&lt;/form&gt;
+&lt;!--&lt;form [formGroup]&#x3D;&quot;form&quot; (ngSubmit)&#x3D;&quot;createProduct()&quot; class&#x3D;&quot;px-4 py-3&quot;&gt;
+  &lt;h3 matDialogTitle&gt;Ajouter un nouvel objet au catalogue :&lt;/h3&gt;
+  &lt;mat-dialog-content&gt;
+    &lt;div class&#x3D;&quot;mb-3&quot;&gt;
+      &lt;label for&#x3D;&quot;libelle&quot;&gt;Nom du produit :&lt;/label&gt;
+      &lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control&quot; formControlName&#x3D;&quot;libelle&quot; id&#x3D;&quot;libelle&quot; placeholder&#x3D;&quot;Nom du produit&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;mb-3&quot;&gt;
+      &lt;label for&#x3D;&quot;description&quot;&gt;Description :&lt;/label&gt;
+      &lt;textarea class&#x3D;&quot;form-control&quot; formControlName&#x3D;&quot;description&quot; id&#x3D;&quot;description&quot; placeholder&#x3D;&quot;Description (max. 512 caractères)&quot;&gt;&lt;/textarea&gt;
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;mb-3&quot;&gt;
+      &lt;label for&#x3D;&quot;image&quot; class&#x3D;&quot;form-label&quot;&gt;Ajoutez une image :&lt;/label&gt;
+      &lt;input formControlName&#x3D;&quot;image&quot; class&#x3D;&quot;form-control&quot; id&#x3D;&quot;image&quot; type&#x3D;&quot;file&quot;
+             (change)&#x3D;&quot;onFileSelected($event)&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;dropdown-divider&quot;&gt;&lt;/div&gt;
+    &lt;p class&#x3D;&quot;text-center pb-0&quot;&gt;Sélectionnez le type de produit :&lt;/p&gt;
+    &lt;div class&#x3D;&quot;col-md text-center&quot;&gt;
+      &lt;select formControlName&#x3D;&quot;type&quot; id&#x3D;&quot;type&quot; class&#x3D;&quot;form-select&quot;&gt;
+        &lt;option *ngFor&#x3D;&quot;let type of productTypes&quot; [ngValue]&#x3D;&quot;type&quot;&gt;
+          {{ type }}
+        &lt;/option&gt;
+      &lt;/select&gt;
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;dropdown-divider mt-4&quot;&gt;&lt;/div&gt;
+    &lt;p class&#x3D;&quot;text-center pb-0&quot;&gt;Indiquez le stock disponible actuel :&lt;/p&gt;
+    &lt;div class&#x3D;&quot;col-md text-center&quot;&gt;
+      &lt;input type&#x3D;&quot;number&quot; class&#x3D;&quot;form-control&quot; formControlName&#x3D;&quot;quantite&quot; id&#x3D;&quot;quantite&quot; placeholder&#x3D;&quot;Quantité&quot;&gt;
+    &lt;/div&gt;
+  &lt;/mat-dialog-content&gt;
+  &lt;div class&#x3D;&quot;dropdown-divider mt-4&quot;&gt;&lt;/div&gt;
+  &lt;mat-dialog-actions align&#x3D;&quot;end&quot;&gt;
+    &lt;input type&#x3D;&quot;submit&quot; value&#x3D;&quot;Modifier le produit&quot; class&#x3D;&quot;btn btn-primary text-center mx-3&quot;&gt;
+    &lt;button mat-button mat-dialog-close&#x3D;&quot;true&quot; class&#x3D;&quot;btn btn-danger text-center mx-3&quot;&gt;Annuler&lt;/button&gt;
+  &lt;/mat-dialog-actions&gt;
+&lt;/form&gt;--&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./create-product-popup.component.css</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss"></code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><form class="edit-product-popup my-0" [formGroup]="form" (ngSubmit)="createProduct()">  <mat-grid-list cols="4" rowHeight="12vh" gutterSize="1em">    <h2 mat-dialog-title>Ajouter un nouveau produit</h2>    <mat-dialog-content class="mat-typography">      <mat-grid-tile rowspan="3" colspan="2">        <img [src]="imageSrc" alt="" class="img-form">      </mat-grid-tile>      <mat-grid-tile rowspan="1" colspan="2">        <mat-form-field hintLabel="Max 128 caractères" appearance="fill">          <mat-label>Nom du produit</mat-label>          <input            matInput            #libelle            formControlName="libelle"            maxlength="128"            placeholder="Ex. Apple iPhone 13 Pro Max" />          <mat-hint align="end">{{ libelle.value?.length || 0 }}/128</mat-hint>          <mat-error *ngIf="form.controls[\'libelle\'].hasError(\'required\')">            <strong>Champs requis</strong>          </mat-error>        </mat-form-field>      </mat-grid-tile>      <mat-grid-tile rowspan="3" colspan="2">        <mat-form-field hintLabel="Max 512 caractères" appearance="fill">          <mat-label>Description</mat-label>          <textarea            rows="12"            matInput            #description            formControlName="description"            maxlength="512"            placeholder="Écrire une description..."></textarea>          <mat-hint align="end">{{ description.value?.length || 0 }}/512</mat-hint>          <mat-error *ngIf="form.controls[\'description\'].hasError(\'required\')">            <strong>Champs requis</strong>          </mat-error>        </mat-form-field>      </mat-grid-tile>      <mat-grid-tile rowspan="1" colspan="2">        <input          formControlName="image"          class="form-control"          id="image"          type="file"          (change)="onFileSelected($event)" />      </mat-grid-tile>      <mat-grid-tile rowspan="1" colspan="2">        <mat-form-field appearance="fill">          <mat-label>Type de produit</mat-label>          <mat-select class="mx-auto" formControlName="type">            <div *ngFor="let type of productTypes">              <mat-option [value]="type">{{ type }}</mat-option>            </div>          </mat-select>          <mat-error *ngIf="form.controls[\'type\'].hasError(\'required\')">            <strong>Champs requis</strong>          </mat-error>        </mat-form-field>      </mat-grid-tile>      <mat-grid-tile rowspan="1" colspan="2">        <mat-form-field appearance="fill">          <mat-label>Quantité</mat-label>          <input matInput type="number" formControlName="quantite" />          <mat-error *ngIf="form.controls[\'libelle\'].hasError(\'required\')">            <strong>Champs requis</strong>          </mat-error>        </mat-form-field>      </mat-grid-tile>    </mat-dialog-content>  </mat-grid-list>  <mat-dialog-actions align="end">    <button mat-button [mat-dialog-close]="true" class="btn btn-danger text-center">Annuler</button>    <input      mat-button      type="submit"      [mat-dialog-close]="true"      class="btn btn-primary text-center"      value="Créer" />  </mat-dialog-actions></form><!--<form [formGroup]="form" (ngSubmit)="createProduct()" class="px-4 py-3">  <h3 matDialogTitle>Ajouter un nouvel objet au catalogue :</h3>  <mat-dialog-content>    <div class="mb-3">      <label for="libelle">Nom du produit :</label>      <input type="text" class="form-control" formControlName="libelle" id="libelle" placeholder="Nom du produit">    </div>    <div class="mb-3">      <label for="description">Description :</label>      <textarea class="form-control" formControlName="description" id="description" placeholder="Description (max. 512 caractères)"></textarea>    </div>    <div class="mb-3">      <label for="image" class="form-label">Ajoutez une image :</label>      <input formControlName="image" class="form-control" id="image" type="file"             (change)="onFileSelected($event)">    </div>    <div class="dropdown-divider"></div>    <p class="text-center pb-0">Sélectionnez le type de produit :</p>    <div class="col-md text-center">      <select formControlName="type" id="type" class="form-select">        <option *ngFor="let type of productTypes" [ngValue]="type">          {{ type }}        </option>      </select>    </div>    <div class="dropdown-divider mt-4"></div>    <p class="text-center pb-0">Indiquez le stock disponible actuel :</p>    <div class="col-md text-center">      <input type="number" class="form-control" formControlName="quantite" id="quantite" placeholder="Quantité">    </div>  </mat-dialog-content>  <div class="dropdown-divider mt-4"></div>  <mat-dialog-actions align="end">    <input type="submit" value="Modifier le produit" class="btn btn-primary text-center mx-3">    <button mat-button mat-dialog-close="true" class="btn btn-danger text-center mx-3">Annuler</button>  </mat-dialog-actions></form>--></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CreateProductPopupComponent', 'selector': 'app-create-product-popup'},{'name': 'EditProductPopupComponent', 'selector': 'app-edit-product-popup'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'ProductListComponent', 'selector': 'app-product-list'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'CreateProductPopupComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'CreateProductPopupComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

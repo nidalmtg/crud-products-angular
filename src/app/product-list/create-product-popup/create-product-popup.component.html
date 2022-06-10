@@ -1,0 +1,117 @@
+<form class="edit-product-popup my-0" [formGroup]="form" (ngSubmit)="createProduct()">
+  <mat-grid-list cols="4" rowHeight="12vh" gutterSize="1em">
+    <h2 mat-dialog-title>Ajouter un nouveau produit</h2>
+    <mat-dialog-content class="mat-typography">
+      <mat-grid-tile rowspan="3" colspan="2">
+        <img [src]="imageSrc" alt="" class="img-form">
+      </mat-grid-tile>
+      <mat-grid-tile rowspan="1" colspan="2">
+        <mat-form-field hintLabel="Max 128 caractères" appearance="fill">
+          <mat-label>Nom du produit</mat-label>
+          <input
+            matInput
+            #libelle
+            formControlName="libelle"
+            maxlength="128"
+            placeholder="Ex. Apple iPhone 13 Pro Max" />
+          <mat-hint align="end">{{ libelle.value?.length || 0 }}/128</mat-hint>
+          <mat-error *ngIf="form.controls['libelle'].hasError('required')">
+            <strong>Champs requis</strong>
+          </mat-error>
+        </mat-form-field>
+      </mat-grid-tile>
+      <mat-grid-tile rowspan="3" colspan="2">
+        <mat-form-field hintLabel="Max 512 caractères" appearance="fill">
+          <mat-label>Description</mat-label>
+          <textarea
+            rows="12"
+            matInput
+            #description
+            formControlName="description"
+            maxlength="512"
+            placeholder="Écrire une description..."></textarea>
+          <mat-hint align="end">{{ description.value?.length || 0 }}/512</mat-hint>
+          <mat-error *ngIf="form.controls['description'].hasError('required')">
+            <strong>Champs requis</strong>
+          </mat-error>
+        </mat-form-field>
+      </mat-grid-tile>
+      <mat-grid-tile rowspan="1" colspan="2">
+        <input
+          formControlName="image"
+          class="form-control"
+          id="image"
+          type="file"
+          (change)="onFileSelected($event)" />
+      </mat-grid-tile>
+      <mat-grid-tile rowspan="1" colspan="2">
+        <mat-form-field appearance="fill">
+          <mat-label>Type de produit</mat-label>
+          <mat-select class="mx-auto" formControlName="type">
+            <div *ngFor="let type of productTypes">
+              <mat-option [value]="type">{{ type }}</mat-option>
+            </div>
+          </mat-select>
+          <mat-error *ngIf="form.controls['type'].hasError('required')">
+            <strong>Champs requis</strong>
+          </mat-error>
+        </mat-form-field>
+      </mat-grid-tile>
+      <mat-grid-tile rowspan="1" colspan="2">
+        <mat-form-field appearance="fill">
+          <mat-label>Quantité</mat-label>
+          <input matInput type="number" formControlName="quantite" />
+          <mat-error *ngIf="form.controls['libelle'].hasError('required')">
+            <strong>Champs requis</strong>
+          </mat-error>
+        </mat-form-field>
+      </mat-grid-tile>
+    </mat-dialog-content>
+  </mat-grid-list>
+  <mat-dialog-actions align="end">
+    <button mat-button [mat-dialog-close]="true" class="btn btn-danger text-center">Annuler</button>
+    <input
+      mat-button
+      type="submit"
+      [mat-dialog-close]="true"
+      class="btn btn-primary text-center"
+      value="Créer" />
+  </mat-dialog-actions>
+</form>
+<!--<form [formGroup]="form" (ngSubmit)="createProduct()" class="px-4 py-3">
+  <h3 matDialogTitle>Ajouter un nouvel objet au catalogue :</h3>
+  <mat-dialog-content>
+    <div class="mb-3">
+      <label for="libelle">Nom du produit :</label>
+      <input type="text" class="form-control" formControlName="libelle" id="libelle" placeholder="Nom du produit">
+    </div>
+    <div class="mb-3">
+      <label for="description">Description :</label>
+      <textarea class="form-control" formControlName="description" id="description" placeholder="Description (max. 512 caractères)"></textarea>
+    </div>
+    <div class="mb-3">
+      <label for="image" class="form-label">Ajoutez une image :</label>
+      <input formControlName="image" class="form-control" id="image" type="file"
+             (change)="onFileSelected($event)">
+    </div>
+    <div class="dropdown-divider"></div>
+    <p class="text-center pb-0">Sélectionnez le type de produit :</p>
+    <div class="col-md text-center">
+      <select formControlName="type" id="type" class="form-select">
+        <option *ngFor="let type of productTypes" [ngValue]="type">
+          {{ type }}
+        </option>
+      </select>
+    </div>
+    <div class="dropdown-divider mt-4"></div>
+    <p class="text-center pb-0">Indiquez le stock disponible actuel :</p>
+    <div class="col-md text-center">
+      <input type="number" class="form-control" formControlName="quantite" id="quantite" placeholder="Quantité">
+    </div>
+  </mat-dialog-content>
+  <div class="dropdown-divider mt-4"></div>
+  <mat-dialog-actions align="end">
+    <input type="submit" value="Modifier le produit" class="btn btn-primary text-center mx-3">
+    <button mat-button mat-dialog-close="true" class="btn btn-danger text-center mx-3">Annuler</button>
+  </mat-dialog-actions>
+</form>-->

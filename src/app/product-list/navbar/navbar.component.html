@@ -1,0 +1,25 @@
+<!-- createProduct template -->
+<ng-template #templateCreate>
+  <app-create-product-popup
+    [productTypes]="this.productTypes"
+    [service]="this.productListService"></app-create-product-popup>
+</ng-template>
+<nav class="navbar navbar-expand-sm bg-light fixed-top" [ngSwitch]="loginService.isLoggedIn">
+  <div class="container-fluid px-5">
+    <a class="navbar-brand" href="#">
+      <img src="../../../assets/img/logo.png" alt="" class="d-inline-block align-text-top nav-logo" />
+    </a>
+    <div class="collapse navbar-collapse" *ngSwitchCase="true">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-end">
+        <button mat-button mat-raised-button class="create-btn" (click)="this.createProductPopup()">
+          <mat-icon>add</mat-icon>
+        </button>
+        <li class="nav-item">
+          <button class="logout-btn" (click)="loginService.doLogout()">
+            <mat-icon class="pt-2">logout</mat-icon><mat-icon class="pt-2">directions_run</mat-icon>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,191 @@
+/* You can add global styles to this file, and also import other style files */
+@import "../node_modules/bootstrap/dist/css/bootstrap.css";
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+/* --- GENERAL --- */
+html {
+  overflow-x: hidden;
+}
+
+app-root > div.container-fluid {
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(12deg, #03045E 0%, #0077B6 85%, #CAF0F8 100%);
+}
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: #0092e0 #ffffff;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #0092e0;
+  border-radius: 10px;
+  border: 3px solid #ffffff;
+}
+
+/* --- NAVBAR --- */
+.navbar {
+  background-color: whitesmoke;
+
+}
+
+.nav-logo {
+  max-height: 40px;
+}
+
+
+/* --- LOGIN --- */
+app-login {
+  background: linear-gradient(12deg, #03045E 0%, #0077B6 85%, #CAF0F8 100%);
+  display: flex;
+  min-height: 100vh;
+  min-width: 100vw;
+  align-items: center;
+  align-self: center;
+}
+
+.login-box {
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+  min-height: 66vh;
+  min-width: 50vw;
+  display: flex;
+  align-items: center;
+}
+
+form mat-form-field {
+  width: 100%;
+}
+
+.logout-btn {
+  margin-left: 1em;
+  padding-right: 2em;
+  background-color: red;
+  color: white;
+  border: 2px solid red;
+  border-radius: 5px;
+}
+
+
+/* --- PAGE CATALOGUE --- */
+app-product-list {
+  background: linear-gradient(12deg, #03045E 0%, #0077B6 85%, #CAF0F8 100%);
+  display: flex;
+  min-height: 100vh;
+  min-width: 100vw;
+  align-items: center;
+  align-self: center;
+}
+
+.table-products {
+  overflow: auto;
+  max-height: 66vh;
+}
+
+.mat-column-numero {
+  border-right: 1px solid black;
+  height: fit-content;
+  max-width: 5%;
+}
+
+.mat-column-image {
+  max-width: 10%;
+  padding-left: 2%;
+}
+
+.mat-column-libelle {
+  min-width: 20%;
+}
+
+.mat-column-description {
+  min-width: 40%;
+}
+
+.mat-column-type {
+  max-width: 10%;
+}
+
+.mat-column-quantite {
+  max-width: 10%;
+}
+
+.mat-column-actions {
+  max-width: 10%;
+}
+
+.table {
+  background-color: white;
+  min-width: 66vw;
+  margin: 0;
+  border-spacing: 20px 0;
+}
+
+.table img {
+  max-height: 48px;
+}
+
+.img-dialog {
+  max-height: 50vh;
+}
+
+.edit-btn, .del-btn {
+  border: 0;
+  background-color: transparent;
+}
+
+.edit-btn {
+  color: dodgerblue;
+}
+
+.del-btn {
+  color: red;
+}
+
+.filter-btn {
+  color: dodgerblue !important;
+  background-color: white !important;
+}
+
+.create-btn {
+  color: white !important;
+  background-color: dodgerblue !important;
+}
+
+.filters {
+  position: fixed;
+  top: 12.5vh;
+  right: 5vw;
+  z-index: 1000;
+}
+
+.filter-box {
+  width: 20vw;
+  color: #535353;
+}
+
+
+/* --- EDIT PRODUCT --- */
+.mat-dialog-container {
+  margin-top: 10vh;
+  min-width: 80vw;
+}
+
+.img-form {
+  max-height: 20vh;
+}
